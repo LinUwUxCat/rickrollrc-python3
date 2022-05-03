@@ -22,7 +22,7 @@ cleanup() { (( audpid > 1 )) && kill $audpid 2>/dev/null; }
 quit() { echo -e "\x1b[2J \x1b[0H ${purp}<3 \x1b[?25h \x1b[u \x1b[m"; }
 
 for arg in "$@"; do
-  if [ [ "$arg" == "inject" ] || [ "$arg" == "upgrade" ] ]; then
+  if [[ "$arg" == "inject" ]]; then
     echo $NEVER_GONNA >> $MAKE_YOU_CRY
     exit
   fi
